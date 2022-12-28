@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Libya.Models.Sehirler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        html,
+        body,
+         {
+            
+            background-color: #eeeeee;
+        }
+
+        table td,
+        table th {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        thead th {
+            color: #fff;
+        }
+
+        .card {
+            border-radius: .5rem;
+        }
+
+        .table-scroll {
+            border-radius: .5rem;
+        }
+
+            .table-scroll table thead th {
+                font-size: 1.25rem;
+            }
+
+        thead {
+            top: 0;
+            position: sticky;
+        }
+        button {
+            width:200px;
+        }
+        
+    </style>
+</head>
+<body><br /><br /><br />
+    <section class="intro">
+        <div class="bg-image h-100">
+            <div class="mask d-flex align-items-center h-100">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; ">
+                                        <table class="table table-striped mb-0">
+                                            <thead style="background-color: #002d72;">
+                                                <tr>
+                                                    <th scope="col">@Html.DisplayNameFor(model => model.sıra)</th>
+                                                    <th scope="col">@Html.DisplayNameFor(model => model.telefonKodu)</th>
+                                                    <th scope="col">@Html.DisplayNameFor(model => model.sehirAdı)</th>
+                                                    <th scope="col">@Html.DisplayNameFor(model => model.nufus)</th>
+                                                    <th scope="col">@Html.DisplayNameFor(model => model.nufus)</th>
+                                                    <th scope="col">@Html.DisplayNameFor(model => model.bölge)</th>
+                                                    <th scope="col">Düzenleme Seçenekleri</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.sıra)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.telefonKodu)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.sehirAdı)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.nufus)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.yuzolcum)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.bölge)
+                                                        </td>
+                                                        <td>
+                                                            @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
+                                                            @Html.ActionLink("Detaylar", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                                                            @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                                                        </td>
+
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table><br />
+
+                                    </div>
+                                </div>
+                            </div><br /<br />
+                            <button class="btn btn-dark">
+                                @Html.ActionLink("Yeni Şehir Ekle", "Create")
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<br /><br />
+

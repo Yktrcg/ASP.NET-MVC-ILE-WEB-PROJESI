@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Libya.Models.Yerler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <script src="~/assets/js/jquery-3.6.2.min.js"></script>
+    <script>
+        
+    </script>
+    <style>
+        body {
+            text-align: justify;
+            background: #eeeeee;
+            font-family: Tahoma;
+            font-size: 14px;
+        }
+        h3{
+            color:#e40;
+        }
+        .a li{
+            list-style-type:none;
+            font-weight:bold;
+        }
+        h4{
+            color:orangered;
+        }
+        hr{
+            color:blue;
+            width:100%;
+            background:blue;
+            border:3px solid;
+        }
+        h2{
+            text-align:center;
+            color:orangered;
+        }
+    </style>
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+    <h2>Libya'nın Tarihi Ve Trustik Yerleri</h2>
+    <div class="container">
+        <ul class="a">
+            @foreach (var item in Model)
+            {
+
+                <h4>Yer Adı</h4>
+                <li>
+                    @Html.DisplayFor(modelItem => item.yerAdı)
+                </li>
+                <h4>Bulunduğu Şehir</h4>
+                <li>
+                    @Html.DisplayFor(modelItem => item.sehiri)
+                </li>
+                <h4 class="bas1">Hakkında</h4>
+                <li class="kutu">
+                    @Html.DisplayFor(modelItem => item.hakkinda)
+                </li>
+                
+                <br />
+                <li>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Detaylar", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </li>
+                <hr />
+                <br />
+
+
+            }
+        </ul>
+        <button class="btn btn-warning">
+            @Html.ActionLink("Yeni Yer Ekle", "Create")
+        </button>
+    </div>
+</body>
+
+<br />
+<br />
+<br />
+

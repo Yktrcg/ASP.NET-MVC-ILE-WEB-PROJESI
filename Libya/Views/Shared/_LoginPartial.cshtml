@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNet.Identity
+<head>
+    <style>
+        .link1 {
+            border: 1px solid deepskyblue;
+            padding-right: 30px;
+            margin-left: 15px;
+            border-radius: 7px;
+            background-color: deepskyblue;
+            width: 150px;
+        }
+
+        .link2 {
+            border: 1px solid #41be38;
+            padding-right: 30px;
+            margin-left: 15px;
+            border-radius: 7px;
+            background-color: #41be38;
+            width: 150px;
+        }
+
+        .link3 {
+            border: 1px solid red;
+            margin-left: 15px;
+            border-radius: 7px;
+            width: 160px;
+        }
+
+        .link4 {
+            border: 1px solid green;
+            margin-left: 15px;
+            border-radius: 7px;
+            width: 190px;
+        }
+    </style>
+</head>
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul>
+            <li class="link4">
+                @Html.ActionLink("Merhaba " + User.Identity.GetUserName() + "", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li class="link3"><a href="javascript:document.getElementById('logoutForm').submit()">Oturumu kapat</a></li>
+        </ul>
+    }
+}
+else
+{
+    <ul >
+        <li class="link1">@Html.ActionLink("Kaydol", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li class="link2">@Html.ActionLink("Oturum aç", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

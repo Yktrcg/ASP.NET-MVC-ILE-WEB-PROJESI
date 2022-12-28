@@ -1,0 +1,77 @@
+﻿@model Libya.Models.Yerler
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<head>
+    <style>
+        #sayfa {
+            background: #eeeeee;
+            text-align: center;
+            max-width: 600px;
+            height: 550px;
+            line-height: 30px;
+            font-family: Tahoma;
+            border-radius: 7px;
+        }
+
+        dt {
+            background-color: lightblue;
+        }
+
+        button {
+            width: 200px;
+        }
+        #hakkinda{
+            text-align:justify;
+        }
+    </style>
+</head>
+<br />
+<br />
+<br />
+<br />
+<div class="container" id="sayfa">
+    <br />
+    <h2 style="color:#e40;">Yer Detayları</h2>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.yerAdı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yerAdı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sehiri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sehiri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hakkinda)
+        </dt>
+
+        <dd id="hakkinda">
+            @Html.DisplayFor(model => model.hakkinda)
+        </dd>
+        
+    </dl>
+    <button class="btn btn-info">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.Id })
+    </button>
+    <button class="btn btn-warning">
+        @Html.ActionLink("Listeye Geri Dön", "Index")
+
+    </button>
+
+</div>
+<br />
+<br />

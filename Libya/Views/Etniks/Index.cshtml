@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Libya.Models.Etnik>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        body {
+            text-align: justify;
+            background: #eeeeee;
+            font-family: Tahoma;
+            font-size: 14px;
+        }
+
+        h3 {
+            color: #e40;
+        }
+
+        .a li {
+            list-style-type: none;
+            font-weight: bold;
+        }
+
+        h4 {
+            color: orangered;
+        }
+
+        hr {
+            color: blue;
+            width: 100%;
+            background: blue;
+            border: 3px solid;
+        }
+
+        h2 {
+            text-align: center;
+            color: orangered;
+        }
+    </style>
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+    <h2>Libya'nın Etnik Yapısı</h2>
+    <div class="container">
+        <ul class="a">
+            @foreach (var item in Model)
+            {
+                <h4>Etnik Kök</h4>
+                <li>@Html.DisplayFor(modelitem => item.etnikKok)</li>
+                <h4>Yaşanılan Şehir</h4>
+                <li>@Html.DisplayFor(modelitem => item.eysehiri)</li>
+                <h4>Etnik Kök Hakkında</h4>
+                <li>@Html.DisplayFor(modelitem => item.ehakkinda)</li>
+                <br />
+                <li>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.Id },new {@class = "btn btn-success"}) |
+                    @Html.ActionLink("Detaylar", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </li>
+                <hr />
+                <br />
+            }
+        </ul>
+        <button class="btn btn-warning">
+            @Html.ActionLink("Yeni Etnik Yapı Ekle", "Create")
+        </button>
+
+    </div>
+    
+</body>
+<br />
+<br />
+<br />
+

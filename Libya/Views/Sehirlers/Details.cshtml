@@ -1,0 +1,88 @@
+﻿@model Libya.Models.Sehirler
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        #sayfa {
+            background: #eeeeee;
+            text-align: center;
+            max-width: 600px;
+            height: 600px;
+            line-height: 30px;
+            font-family: Tahoma;
+            border-radius: 7px;
+        }
+        dt{
+            background-color:lightblue;
+        }
+        button{
+            width:200px;
+        }
+        
+    </style>
+</head>
+<br /><br /><br /><br />
+<div class="container" id="sayfa"><br />
+    <h2 style="color:#e40;">Şehir Detayları</h2>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sıra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sıra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefonKodu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefonKodu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sehirAdı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sehirAdı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nufus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nufus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yuzolcum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yuzolcum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bölge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bölge)
+        </dd>
+
+    </dl>
+    <button class="btn btn-info" >
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.Id }) 
+    </button>
+    <button class="btn btn-warning">
+        @Html.ActionLink("Listeye Geri Dön", "Index")
+
+    </button>
+
+</div><br /><br />
+

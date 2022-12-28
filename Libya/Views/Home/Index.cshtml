@@ -1,0 +1,340 @@
+﻿@using Libya.Models;
+@model List<resimler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- ======= slider alanı ======= -->
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        @*veritabanından çekilen görseller*@
+
+    <div class="carousel-inner" role="listbox">
+        @foreach (var r in Model)
+        {
+            <!-- Slider 1 -->
+            <div class="carousel-item active" style="background-image: url('@r.resim');">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">LİBYA'YA HOŞ GELDİNİZ</h2>
+                        <p class="animate__animated animate__fadeInUp">Libya, resmi adıyla Libya Devleti, Akdeniz kıyısında, doğuda Mısır, batıda Cezayir ve Tunus, güneyde Nijer ve Çad, güneydoğuda Sudan ile komşu olan bir Mağrip ve Kuzey Afrika ülkesidir. Ülke Trablusgarp, Fizan ve Sirenayka olmak üzere üç tarihi bölgeden oluşur.</p>
+                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Daha Fazla</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section><!-- slider alan sonu -->
+
+<main id="main">
+
+    <!-- ======= hakkında alanı ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Hakkında</h2>
+                <p>Libya Hakkında</p>
+            </div>
+
+            <div class="row content">
+                <div class="col-lg-12">
+                    <p>
+                        Libya'nın ilk yerleşimcileri Tunç Çağı'nın sonlarından itibaren bölgede yaşayan İbero-Moritanya ve Kapsiyen kültürleri ile bu kültürlerin ardılları olan Berberilerdir. Fenikeliler ülkenin batısında ticaret karakolları kurdular,
+                        Yunan koloniciler de doğuda şehir-devletler oluşturdular. Roma İmparatorluğu hakimiyet kurmadan önce Libya değişik dönemlerde Kartacalılar,
+                        Persler, Mısırlılar ve Yunanlarca yönetildi. Ülke Erken Hristiyanlık'ın merkezlerinden biri oldu. Batı Roma İmparatorluğu'nun çöküşünden 7.
+                        yüzyılda Müslümanların Mağrip'i fethine kadar Libya Vandalların kontrolündeydi. 16. yüzyılda İspanyol İmparatorluğu ile Hospitalier Şövalyeleri
+                        Trablus'u işgal ettiler ve Osmanlı İmparatorluğu'nun 1551'de bölgeyi fethine kadar ellerinde tuttular. Osmanlı egemenliğindeki Libya, 18 ve 19.
+                        yüzyıllarda Berberi Savaşları'na dahil oldu. Trablusgarp Savaşı'nın ardından ülke İtalyan hakimiyetine girdi. İtalya ülkeyi Trablusgarp ve Sirenayka
+                        kolonilerine (1911-1934) ayırdı, 1934'ten 1947'ye kadar ise İtalyan Libyası adı altında hüküm sürdü. Libya II. Dünya Savaşı'nda Kuzey Afrika Cephesi'ne sahne oldu.
+                        Savaşın ardından İtalyan nüfus git gide azaldı. 1951'de Libya Krallığı bağımsızlığını kazandı. 1969 Libya darbesi sonucunda Kral I. İdris tahttan indirildi. Kansız bir şekilde
+                        gerçekleştirilen darbenin lideri Muammer Kaddafi 1969'dan Libya İç Savaşı'nda devrilip öldürüldüğü 2011 yılına kadar iktidarda kaldı. Savaşın ardından iki ana güç ortaya
+                        çıktı. Bunlardan biri Tobruk'taki Temsilciler Meclisi, diğeri ise 2012'de seçimle iş başına gelen Trablus'taki Genel Ulusal Kongreydi. BM liderliğindeki barış
+                        görüşmelerinin ardından Tobruk ve Trablus hükûmetleri 2015'te birleşerek BM destekli Ulusal Mutabakat Hükûmetini kurdular. Genel Ulusal Kongre UMH'nin kurulmasının
+                        ardından kendini feshetti. Ancak UMH Libya'da barışı sağlayamadı, Tobruk ve Trablus merkezli hükûmetler (ayrıca İslami gruplar ile kabileler) arasında İkinci Libya İç
+                        Savaşı çıktı. İki ana taraf arasında 24 Ekim 2020'de kalıcı ateşkes anlaşması imzalandı.
+
+                        Libya Birleşmiş Milletler, Bağlantısızlar Hareketi, Arap Birliği, İİT ve OPEC üyesidir. Ülkenin resmi dini İslam'dır, Sünni Müslümanlar Libya halkının %96,6'sını oluşturmaktadır.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- hakkında alanı sonu Section -->
+    <!-- ======= yazı alanı Section ======= -->
+    <section id="counts" class="counts">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row no-gutters">
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                        <h2>Nüfusu</h2><br />
+                        <i class="bi bi-people"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="6871292" data-purecounter-duration="1" class="purecounter"></span>
+                        <p><strong>Son genel sayımda Libya'ın nüfusu toplam 6.871.292 olarak açıklanmıştır.</strong></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                        <h2>Yüz Ölçümü</h2><br />
+                        <i class="bi bi-map"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="1616622" data-purecounter-duration="1" class="purecounter"></span>
+                        <p><strong> Libya'nın yüz ölçümü 1616622 km² olarak kayıtlara geçmiştir..</strong></p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                        <h2>Milli Gelir</h2><br />
+                        <i class="bi bi-cash-coin"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="4746" data-purecounter-duration="1" class="purecounter"></span>
+                        <p><strong>Kişi başına düşen milli gelir 4746$'dır</strong></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                        <h2>Mutluluk Oranı</h2><br />
+                        <i class="bi bi-emoji-smile"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+                        <p><strong>Libya 4 bin dolarlık kişi başı GSMH tutarı ile en mutsuz ülkeler arasında.Bu oran sadece %30'dur'</strong></p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- yazı alanı sonu Section -->
+    <!-- ======= libya video alanı Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+        <div class="container-fluid" data-aos="fade-up">
+
+            <div class="row">
+
+                <div class="col-lg-5 align-items-stretch video-box" style="background-image: url('../../assets/img/video.jpg');" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://youtu.be/ew7kK1i0Bho" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                </div>
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+                    <div class="content">
+                        <h3><strong>Libya Hakkında Detaylı Bilgiler </strong></h3>
+                        <p>
+                            Detaylı bilgilere ulaşmak için ok tuşlarına basınız.
+                        </p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>1</span>Başkenti <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Ülkenin başkenti <strong>Trablus'tur</strong>.Büyük Şehirleri:Bingazi,Misrate,Fizan,Sirt,Zuvara ve Tobruk'tur.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>2</span> Para Birimi <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse " data-bs-parent=".accordion-list">
+                                    <p>
+                                        1951 ile 1971 arası Libya'nın ilk resmi para birimi Libya Lirası tedavülde idi. 1971 yılından bu yana ise Libya resmi para birimi <strong>Libya Dinarı</strong> olarak değiştirilmiştir. 1971 yılında tedavüle giren Libya Dinarı o günden bu yana kullanımdadır
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>3</span> Dini <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Ülkenin resmi dini <strong>İslam'dır</strong>, Sünni Müslümanlar Libya halkının %96,6'sını oluşturmaktadır
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>4</span> Resmi Dili <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        <strong>Libya'nın resmi dili Arapça ve Berbericedir.</strong> Büyük şehirlerde İtalyanca ve İngilizcede yaygın olarak konulmaktadır.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>5</span> Genel Bilgiler <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        <strong>Zaman Dilim: </strong>	UTC+2 (DAS)<br />
+                                        <strong>Trafik Akışı: </strong> Sağ <br />
+                                        <strong>Telefon Kodu: </strong> 218 <br />
+                                        <strong>İnternet Alan Adı: </strong> .ly
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- libya video alanı sonu Section -->
+    <br /><br />
+    <!-- ======= Sektör alanı Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Hakkında</h2>
+                <p>Libya Jeopolitiği</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-body-text"></i></div>
+                        <h4><a href="../Home/Tarım">Tarım</a></h4>
+                        <p>Ülkede eskiden beri tarımda kendine yeterliliğe çok önem verilmesine rağmen, tarımda kendine yeterlilik gerçekleşememiştir. Libya gıda ihtiyacının %80’ini ithal etmek zorunda kalmaktadır. Tarım, hayvancılık ve balıkçılık GSYİH’nın %3,2’sini oluşturmaktadır.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-bank"></i></div>
+                        <h4><a href="../Home/Truzim">Truzim</a></h4>
+                        <p>Akdeniz’in göz kamaştıran güzelliğini yansıtan bir Kuzey Afrika ülkesi olan Libya, batıda Cezayir ve Tunus, güneyde Nijer ve Çad, doğuda Mısır, güneydoğuda ise Sudan ile komşu</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-brightness-high"></i></div>
+                        <h4><a href="../Home/Enerji">Enerji</a></h4>
+                        <p>Petrolden sonra keşfedilen doğalgazda da Libya önemli bir konuma sahip. Öyle ki Libya, Afrika'da keşfedilmiş en büyük doğal gaz rezervine sahip ülke. Ülke petrolünün büyük çoğunluğu “Petrol Hilali” olarak adlandırılan bölgeden çıkartılıyor.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-cash"></i></div>
+                        <h4><a href="../Home/Ekonomi">Ekonomi</a></h4>
+                        <p>
+                            Libya’da ekonomik, sosyal ve siyasal kurumların tahrip edilmiş olması, ekonomisini yeniden yapılandırması önündeki en önemli engeli
+                            oluşturmaktadır. Ekonomik yapıdaki dönüşüm her şeyden önce ekonominin devletçi yapısının dönüştürülmesi ile başlayacaktır.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-cloud-rain"></i></div>
+                        <h4><a href="../Home/Iklim">İklim</a></h4>
+                        <p>Libya iklimi yükseklik ve denize yakınlık bakımından çeşitlilik arz eder. Fakat genel olarak ülke, çöl ikliminin tesiri altındadır. Yazları oldukça sıcak ve kurak, kışları çoğunlukla ılık ve az yağışlı geçer. Bu yağışlar, birkaç haftayı bulmaz</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
+                        <h4><a href="../Etniks/Index">Etnik Yapı</a></h4>
+                        <p>Libya halkının etnik unsurlarını öncelikle; Araplaşmış Berberiler, saf Arap ve çöl kabilelerinden oluşan Bedeviler ile Tuaregler oluşturmaktadır.[30] Ayrıca az sayıda Sahara Altı Afrika siyahîlerinden olan Sahiller ile Tobular da mevcuttur.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- sektör alanı sonu Section -->
+    <!-- ======= önemli kişler Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Başkanlar</h2>
+                <p>Libya'nın önemli başkanları</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="~/assets/img/1.png" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>I. İdris</h4>
+                                <span>Libya'nın ilk ve son kralı. 1969 darbesi ile birlikte devrildi</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+                    <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="~/assets/img/2.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Muhammer Kaddafi</h4>
+                                <span>Kaddafi, Genel Halk Kongresi'nin Halkın Otoritesinin Kurulmasına İlişkin Bildiri'yi kabul etmesinden sonra 2 Mart 1977'de Devrim Komuta Konseyi'ni feshetti</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+                    <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="~/assets/img/3.jpg" class="img-fluid" height="300">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>
+                                    Nuri Ebusehmen<h4>
+                                        <span>Ayaklanma sırasında Trablus'taydı. 4 Ağustos 2014 tarihine kadar uluslararası alanda tanınmıştır.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
+                    <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="~/assets/img/4.jpg" class="img-fluid" height="300">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Muhammed El-Menfi</h4>
+                                <span>Uluslararası alanda kabul görmüş, merkezi Trablus'ta</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- önemli kişiler Section -->
+</main><!-- End #main -->

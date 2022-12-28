@@ -1,0 +1,141 @@
+﻿@model Libya.Models.Sehirler
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+#kutu {
+            width: 700px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+
+  margin-bottom: 30px;
+  border: none;
+  line-height:40px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+    </style>
+</head>
+
+<br /><br />
+<body>
+    <br /><br /><br /><br />
+                      <div id="kutu">
+                          @using (Html.BeginForm())
+                          {
+                              @Html.AntiForgeryToken()
+
+
+
+
+                              <h2 style="color:#e40; text-align:center;">Şehir Düzenle</h2>
+                              @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                              @Html.HiddenFor(model => model.Id)
+                              <fieldset>
+
+
+
+                                  <label>@Html.LabelFor(model => model.sıra, htmlAttributes: new { @class = "control-label col-md-8" })</label>
+                                  <div class="col-md-12">
+                                      @Html.EditorFor(model => model.sıra, new { htmlAttributes = new { @class = "form-control" } })
+                                      @Html.ValidationMessageFor(model => model.sıra, "", new { @class = "text-danger" })
+                                  </div>
+
+                                  <label>@Html.LabelFor(model => model.telefonKodu, htmlAttributes: new { @class = "control-label col-md-8" })</label>
+                                  <div class="col-md-12">
+                                      @Html.EditorFor(model => model.telefonKodu, new { htmlAttributes = new { @class = "form-control" } })
+                                      @Html.ValidationMessageFor(model => model.telefonKodu, "", new { @class = "text-danger" })
+                                  </div>
+
+                                  <label>@Html.LabelFor(model => model.sehirAdı, htmlAttributes: new { @class = "control-label col-md-8" })</label>
+                                  <div class="col-md-12">
+                                      @Html.EditorFor(model => model.sehirAdı, new { htmlAttributes = new { @class = "form-control" } })
+                                      @Html.ValidationMessageFor(model => model.sehirAdı, "", new { @class = "text-danger" })
+                                  </div>
+                                  <label>@Html.LabelFor(model => model.nufus, htmlAttributes: new { @class = "control-label col-md-8" })</label>
+                                  <div class="col-md-12">
+                                      @Html.EditorFor(model => model.nufus, new { htmlAttributes = new { @class = "form-control" } })
+                                      @Html.ValidationMessageFor(model => model.nufus, "", new { @class = "text-danger" })
+                                  </div>
+                                  <label>@Html.LabelFor(model => model.yuzolcum, htmlAttributes: new { @class = "control-label col-md-8" })</label>
+                                  <div class="col-md-12">
+                                      @Html.EditorFor(model => model.yuzolcum, new { htmlAttributes = new { @class = "form-control" } })
+                                      @Html.ValidationMessageFor(model => model.yuzolcum, "", new { @class = "text-danger" })
+                                  </div>
+                                  <label>@Html.LabelFor(model => model.bölge, htmlAttributes: new { @class = "control-label col-md-8" })</label>
+                                  <div class="col-md-12">
+                                      @Html.EditorFor(model => model.bölge, new { htmlAttributes = new { @class = "form-control" } })
+                                      @Html.ValidationMessageFor(model => model.bölge, "", new { @class = "text-danger" })
+                                  </div>
+                              </fieldset>
+
+
+                              <div class="form-group">
+                                  <div class="col-md-offset-2 col-md-12">
+                                      <button class="btn btn-primary btn-lg btn-block">Kaydet</button>
+                                  </div>
+                              </div><br />
+                              <div class="form-group">
+                                  <div class="col-md-offset-2 col-md-12">
+                                      <button class="btn btn-warning btn-lg btn-block">@Html.ActionLink("Listeye Geri Dön", "Index")</button>
+                                  </div>
+                              </div>
+
+
+
+
+                              <div>
+
+                              </div>
+
+
+                          }
+                      </div>
+    
+
+
+</body>
+

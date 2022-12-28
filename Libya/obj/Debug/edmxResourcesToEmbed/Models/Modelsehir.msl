@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sehirlerModelStoreContainer" CdmEntityContainer="sehirlerEntities">
+    <EntitySetMapping Name="Sehirlers">
+      <EntityTypeMapping TypeName="sehirlerModel.Sehirler">
+        <MappingFragment StoreEntitySet="Sehirler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="sıra" ColumnName="sıra" />
+          <ScalarProperty Name="telefonKodu" ColumnName="telefonKodu" />
+          <ScalarProperty Name="sehirAdı" ColumnName="sehirAdı" />
+          <ScalarProperty Name="nufus" ColumnName="nufus" />
+          <ScalarProperty Name="yuzolcum" ColumnName="yuzolcum" />
+          <ScalarProperty Name="bölge" ColumnName="bölge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

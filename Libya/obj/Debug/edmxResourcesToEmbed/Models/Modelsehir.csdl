@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sehirlerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Sehirler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sıra" Type="Int32" />
+    <Property Name="telefonKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sehirAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nufus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yuzolcum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bölge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="sehirlerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sehirlers" EntityType="Self.Sehirler" />
+  </EntityContainer>
+</Schema>
